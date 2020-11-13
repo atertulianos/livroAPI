@@ -20,7 +20,7 @@ Deverá ter instalado os seguintes componentes:
 abra o terminal/ prompt e acesse a pasta WebApi ex: `cd livroAPI/WebApi`, onde está API dotnet Core 3.1, execute o comando  `dotnet build`
 
 ## Iniciar o servidor da API dotnet core 3.1
-Execute o comando dotnet run
+Execute o comando `dotnet run`
 
 ## Instalando npm
 Abra o terminal e acesse a pasta ClientApi Ex: `cd livroAPI/ClientApi`, execute o comando`npm install` para instalar as dependencias do angular e sapui5 web components.
@@ -32,10 +32,10 @@ Execute `ng serve` para iniciar um servidor de desenvolvimento na pasta "ClientA
 # Obs:
 
 ## Caso a pasta migrations não esteje no projeto.
-Execute o comando dotnet ef migrations add initial  - Este comando gera a pasta migrations e cria o banco de dados e suas conexões.
+Execute o comando `dotnet ef migrations add initial`  - Este comando gera a pasta migrations e cria o banco de dados e suas conexões.
 
 ## Caso os dados do banco não esteje carregando...
-execute o comando dotnet ef database update
+execute o comando `dotnet ef database update`
 
 ## Lembrete...
 Os comandos `dotnet build` e `dotnet run` deve ser executado pelo terminal ou prompt de comando de de dentro da pasta da API Dotnet `WebApi`.
