@@ -34,8 +34,8 @@ Execute `ng serve` para iniciar um servidor de desenvolvimento na pasta "ClientA
 ## Caso a pasta migrations não esteje no projeto.
 Execute o comando dotnet ef migrations add initial  - Este comando gera a pasta migrations e cria o banco de dados e suas conexões.
 
-## Caso o banco de dados não esteje carregando...
-execute o comando dotnet database update
+## Caso os dados do banco não esteje carregando...
+execute o comando dotnet ef database update
 
 ## Lembrete...
 Os comandos `dotnet build` e `dotnet run` deve ser executado pelo terminal ou prompt de comando de de dentro da pasta da API Dotnet `WebApi`.
