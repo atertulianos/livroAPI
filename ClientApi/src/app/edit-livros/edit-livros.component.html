@@ -1,0 +1,94 @@
+
+<div class="col-sm-12">
+  <div style="margin-bottom: 0.5rem" *ngIf = "livroSelecionado">
+    <div class="row col-sm-12">
+      <div class="mr-auto">
+        <ui5-label><app-titulos [titulo]="'Código: '+livroSelecionado.id +' |  Livro: '+ livroSelecionado.titulo"></app-titulos></ui5-label>
+      </div>
+      <div >
+        <ui5-button style="margin-top: 0.5rem" design="Positive" (click)="voltar()" icon="sys-back">Voltar</ui5-button>
+      </div>
+    </div>
+    <div class="mx-auto col-sm-5">
+      <!-- Card para visualização de livros após selecionar o livro desejado  -->
+        <div class="card ">
+          <div class="card-body ">
+            <form [formGroup]="livrosForm" (submit)="livroSubmit()">
+              <div class="form-group">
+                <label for="titulo">Título</label>
+                <input type="text" class="form-control" id="titulo" formControlName="titulo" aria-describedby="tituloHelp">
+                <!-- <small id="tituloHelp" class="form-text text-muted">Texto para alerta.</small> -->
+              </div>
+              <div class="form-group">
+                <label for="autor">Autor</label>
+                <input type="text" class="form-control" id="autor" formControlName="autor" >
+              </div>
+              <div class="form-group">
+                <label for="desc">Descrição</label>
+                <textarea type="text" class="form-control" id="desc" rows="3" formControlName="descricao" ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-outline-primary" [disabled]="!livrosForm.valid">Atualizar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div style="margin-bottom: 0.5rem" *ngIf = "!livroSelecionado">
+
+    <ui5-label><app-titulos [titulo]='titulo'></app-titulos></ui5-label>
+
+    <section class="table-example">
+      <div class="double-line-content text-center" *ngIf="livros.length == 0">
+        <h3>NENHUM LIVRO FOI ENCONTRADO! </h3>
+      </div>
+      <div class="snippet flex-column">
+        <ui5-table class="table table-rover" *ngIf="livros.length != 0" id="tbl" ui5-table="">
+          <!-- Columns -->
+          <ui5-table-column slot="columns-1" style="width: 12rem" ui5-table-column="" first="">
+            <span style="line-height: 1.4rem"><b>Código</b></span>
+          </ui5-table-column>
+
+          <ui5-table-column slot="columns-2" min-width="800" style="text-transform: uppercase; font-weight: bold;" popin-text="Título"  demand-popin="false" ui5-table-column="">
+            <span style="line-height: 1.4rem"><b>Título</b></span>
+          </ui5-table-column>
+
+          <ui5-table-column slot="columns-3" min-width="600" popin-text="Autor" demand-popin="false" ui5-table-column="">
+            <span style="line-height: 1.4rem"><b>Autor</b></span>
+          </ui5-table-column>
+
+          <ui5-table-column slot="columns-4" min-width="600" maxlength="20" popin-text="Descrição" demand-popin="false" ui5-table-column="">
+            <span style="line-height: 1.4rem"><b>Descrição</b></span>
+          </ui5-table-column>
+
+          <ui5-table-column slot="columns-5" ui5-table-column="" last="">
+            <span style="line-height: 1.4rem"><b>Opções</b></span>
+          </ui5-table-column>
+
+          <!-- Rows -->
+          <ui5-table-row style="cursor: pointer" *ngFor="let livro of livros" (click)="livroSelect(livro)" ui5-table-row="" _tab-index="-1" slot="default-1">
+            <ui5-table-cell ui5-table-cell="" first-in-row="" slot="default-1">
+              <div class="double-line-content"><span
+                style="margin-top: 0.5rem"><b>{{livro.id}} </b></span></div>
+              </ui5-table-cell>
+              <ui5-table-cell ui5-table-cell="" slot="default-2"><span class="middle"> {{livro.titulo}} </span>
+              </ui5-table-cell>
+              <ui5-table-cell ui5-table-cell="" slot="default-3" popined=""><span class="middle"> {{livro.autor}}</span>
+              </ui5-table-cell>
+              <ui5-table-cell ui5-table-cell="" slot="default-4" popined=""><span style="color: #2b7c2b"
+                class="middle"><b> {{livro.descricao}} </b></span></ui5-table-cell>
+                <ui5-table-cell ui5-table-cell="" last-in-row="" slot="default-5"><span class="middle">
+                  <ui5-button routerLink="edit-livros" design="Default" icon="request"></ui5-button>
+                </span>
+              </ui5-table-cell>
+            </ui5-table-row>
+
+          </ui5-table>
+
+        </div>
+
+      </section>
+    </div>
+
+  </div>

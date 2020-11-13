@@ -1,0 +1,29 @@
+<ui5-shellbar primary-title="Gestão de Livros" >
+  <ui5-avatar slot="profile" ></ui5-avatar>
+  <img slot="logo" src="../../../assets/images/sap-logo-svg.svg"/>
+  <ui5-button icon="nav-back" slot="startButton" routerLink="dashboard"></ui5-button>
+
+</ui5-shellbar>
+
+<ui5-tabcontainer  class="full-width" show-overflow="true" collapsed>
+
+    <ui5-tab icon="education" >
+      <ui5-button routerLink="livros" icon="learning-assistant" design="Default" aria-labelledby="lbllearning-assistant">Visualizar Livros</ui5-button>
+    </ui5-tab>
+    <ui5-tab semantic-color="Positive" icon="add-coursebook" >
+      <ui5-button routerLink="add-livros" design="Positive" icon="add-activity">Cadastrar Livros</ui5-button>
+    </ui5-tab>
+
+    <ui5-tab semantic-color="Critical" icon="write-new-document" >
+      <ui5-button routerLink="edit-livros" design="Critical" icon="request">Editar Livros</ui5-button>
+    </ui5-tab>
+
+    <ui5-tab semantic-color="Negative"   icon="delete" >
+      <ui5-button routerLink="delete-livros" design="Negative" icon="delete">Excluir Livros</ui5-button>
+    </ui5-tab>
+    <ui5-tab-separator></ui5-tab-separator>
+    <ui5-tab semantic-color="Neutral"   icon="action-settings" >
+      <ui5-label>Configurações do sistema</ui5-label>
+    </ui5-tab>
+
+</ui5-tabcontainer>

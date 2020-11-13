@@ -1,0 +1,27 @@
+<div class="col-sm-12">
+  <ui5-label><app-titulos [titulo]='titulo'></app-titulos></ui5-label>
+  <div class="mx-auto col-sm-5">
+    <div class="card ">
+      <div class="card-body ">
+        <form [formGroup]="livrosForm" (submit)="livroSubmit()">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control" formControlName="titulo" id="titulo" placeholder="Digite o título do livro" aria-describedby="tituloHelp" aria-required="true">
+            <!-- <small id="tituloHelp" class="form-text text-muted">Texto para alerta.</small> -->
+          </div>
+          <div class="form-group">
+            <label for="autor">Autor</label>
+            <input type="text" class="form-control" formControlName="autor" id="autor" placeholder="Digite o nome do Autor" aria-required="true" >
+          </div>
+          <div class="form-group">
+            <label for="desc">Descrição</label>
+            <textarea type="text" class="form-control" formControlName="descricao" id="desc" rows="3" placeholder="Digite a descrição do livro" aria-required="true" ></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-outline-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
