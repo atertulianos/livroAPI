@@ -3,7 +3,7 @@
 
 # livroAPI
 
-Front End desse projeto foi gerado utilizando [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0 e [SAPUI5 Web Components](https://sap.github.io/ui5-webcomponents/playground) version 1.0.0-rc.9. O
+Front End desse projeto foi gerado utilizando [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0 e [SAPUI5 Web Components](https://sap.github.io/ui5-webcomponents/playground) version 1.0.0-rc.9.
 
 Back End utilizando [DotNet Core 3.1](https://dotnet.microsoft.com/download/dotnet/current) verion 3.1 e [EF - Entity Framework](https://docs.microsoft.com/pt-br/ef/core/)Version 5.0.0.
 
@@ -43,12 +43,13 @@ Execute o comando `dotnet ef migrations add initial`  - Este comando gera a past
 execute o comando `dotnet ef database update`
 
 ## Lembrete...
-Os comandos `dotnet build` e `dotnet run` deve ser executado pelo terminal ou prompt de comando de de dentro da pasta da API Dotnet `WebApi`.
 
-os comandos `npm install` e `ng serve` devem ser executados pelo terminal ou prompt de comando de dentro da pasta do cliente front end `ClientApi`.
+Os comandos `dotnet build` e `dotnet run` devem ser executados pelo terminal ou prompt de comando de dentro da pasta da API `WebApi`.
+
+os comandos `npm install` e `ng serve` devem ser executados pelo terminal ou prompt de comando de dentro da pasta do cliente FrontEnd `ClientApi`.
 
 
-Obrigado e bons estudos.
+Obrigado. 
 
 
 
