@@ -3,8 +3,10 @@
 
 # livroAPI
 
-Front End desse projeto foi gerado utilizando [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0 e [SAPUI5 Web Components](https://sap.github.io/ui5-webcomponents/playground) version 1.0.0-rc.9
-Back End utilizando [DotNet Core 3.1](https://dotnet.microsoft.com/download/dotnet/current) verion 3.1 e [EF - Entity Framework](https://docs.microsoft.com/pt-br/ef/core/)Version 5.0.0
+Front End desse projeto foi gerado utilizando [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0 e [SAPUI5 Web Components](https://sap.github.io/ui5-webcomponents/playground) version 1.0.0-rc.9. O
+
+Back End utilizando [DotNet Core 3.1](https://dotnet.microsoft.com/download/dotnet/current) verion 3.1 e [EF - Entity Framework](https://docs.microsoft.com/pt-br/ef/core/)Version 5.0.0.
+
 Banco de dados - [Microsoft Entity Framework Sqlite](https://docs.microsoft.com/pt-br/ef/core/providers/sqlite/?tabs=dotnet-core-cli) Version 5.0.1
 
 # REQUISITOS PARA EXECUTAR O PROJETO
